@@ -108,7 +108,7 @@ export default function App() {
             ◈
           </span>
           <div>
-            <h1 className={styles.title}>Img2PDF</h1>
+            <h1 className={styles.title}>PixPDF</h1>
             <p className={styles.subtitle}>Upload images, export as PDF</p>
           </div>
         </div>

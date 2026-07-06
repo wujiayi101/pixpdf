@@ -1,4 +1,4 @@
-# Img2PDF
+# PixPDF
 
 Upload images and export them as a single PDF — entirely in the browser.
 
@@ -30,8 +30,8 @@ Pushes to `main` run CI (lint + build) and deploy to Cloudflare Pages.
 Required GitHub **repository** secrets:
 
 ```bash
-gh secret set CLOUDFLARE_API_TOKEN --repo wujiayi101/img2pdf
-gh secret set CLOUDFLARE_ACCOUNT_ID --repo wujiayi101/img2pdf
+gh secret set CLOUDFLARE_API_TOKEN --repo wujiayi101/pixpdf
+gh secret set CLOUDFLARE_ACCOUNT_ID --repo wujiayi101/pixpdf
 ```
 
 | Secret | Description |

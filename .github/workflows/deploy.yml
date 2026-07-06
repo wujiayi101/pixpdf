@@ -36,11 +36,11 @@ jobs:
             echo "::error::CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID secrets are required"
             exit 1
           fi
-          if ! npx --yes wrangler@3 pages project list | grep -qw img2pdf; then
-            echo "Creating Cloudflare Pages project img2pdf"
-            npx --yes wrangler@3 pages project create img2pdf --production-branch=main
+          if ! npx --yes wrangler@3 pages project list | grep -qw pixpdf; then
+            echo "Creating Cloudflare Pages project pixpdf"
+            npx --yes wrangler@3 pages project create pixpdf --production-branch=main
           else
-            echo "Cloudflare Pages project img2pdf already exists"
+            echo "Cloudflare Pages project pixpdf already exists"
           fi
 
       - name: Deploy to Cloudflare Pages
@@ -48,8 +48,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=img2pdf --branch=main --commit-dirty=true
+          command: pages deploy dist --project-name=pixpdf --branch=main --commit-dirty=true
 
       - name: Deployment URL
         if: success()
-        run: echo "Deployed to https://img2pdf.pages.dev"
+        run: echo "Deployed to https://pixpdf.pages.dev"
