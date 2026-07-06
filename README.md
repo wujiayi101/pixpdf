@@ -2,6 +2,8 @@
 
 Upload images and export them as a single PDF — entirely in the browser.
 
+**Live:** https://pixpdf.wu101.com (also at https://pixpdf.pages.dev)
+
 ## Features
 
 - **Drag & drop or file picker** — add JPEG, PNG, WebP, GIF, or BMP images
